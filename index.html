@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body onload="adjustScreen()">
     <header>
       <div class="logo">
         <div class="wrapper">
@@ -17,12 +17,13 @@
       </div> <!-- end.logo -->
       <div class="navbar">
         <nav class="wrapper">
-          <div class="shadow-wrapper">
+          <div class="shadow-wrapper" id="navlinks">
             <a href="index.html" class="selected border-left">Home</a>
             <a href="about.html">About</a>
             <a href="designs.html">Designs</a>
             <a href="contact.html">Contact</a>
             <a href="order.html" id="order-button">Place Order</a>
+            <a href="javascript:void(0);" class="border-left icon" onclick="animateMenu()">&#9776;</a>
           </div>
         </nav>
       </div> <!-- end.wrapper -->
@@ -51,3 +52,75 @@
 
   </body>
 </html>
+
+<script type="text/javascript">
+menuIsOpen = false
+function responsive() {
+    var x = document.getElementById("navlinks");
+    if (x.className === "shadow-wrapper") {
+        x.className += " responsive";
+    } else {
+        x.className = "shadow-wrapper";
+    }
+}
+
+function animateMenu() {
+  var elem = document.getElementById("navlinks");
+  var height;
+  //var height = elem.style.height;
+  console.log("menu status is: " + menuIsOpen);
+  if (menuIsOpen == false) {
+    height = 52;
+    var id = setInterval(frame, 5);
+  } else if (menuIsOpen) {
+    height = 260;
+    responsive();
+    var id2 = setInterval(close, 5);
+  }
+
+  function frame() {
+    if (height == 260) {
+      clearInterval(id);
+      menuIsOpen = true
+      responsive()
+    } else {
+      height += 4;
+      elem.style.height = height + 'px';
+      console.log(height);
+    }
+  }
+
+  function close() {
+    if (height == 52) {
+      clearInterval(id2)
+      menuIsOpen = false
+      elem.style.height = ''
+    } else {
+      height = height - 4;
+      elem.style.height = height + 'px';
+    }
+  }
+}
+
+function adjustScreen() {
+  var wrapper = document.querySelectorAll('.wrapper')
+  if (window.innerWidth <= 860) {
+    for (var i=0; i<wrapper.length; i++) {
+      wrapper[i].style.width = window.innerWidth - 30 + "px"
+      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
+    }
+  } else if (window.innerWidth <= 1200) {
+    for (var i=0; i<wrapper.length; i++) {
+      wrapper[i].style.width = window.innerWidth - 130 + "px"
+      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
+    }
+  } else {
+    for (var i=0; i<wrapper.length; i++) {
+      wrapper[i].style.width = 1050 + "px"
+      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
+    }
+  }
+}
+
+window.addEventListener('resize', adjustScreen)
+</script>
