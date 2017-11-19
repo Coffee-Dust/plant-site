@@ -7,7 +7,6 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -23,8 +22,13 @@ body {
   background-size: cover; */
   background-color: rgb(236, 234, 231);
   font: 1em/1.3 'Josefin Slab', serif;
-  overflow-x: hidden;
   position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  overflow-x: hidden;
 }
 
 iframe, video {
