@@ -29,6 +29,7 @@ body {
 .container {
   position: relative;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 iframe, video {
