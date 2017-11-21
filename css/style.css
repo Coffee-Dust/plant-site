@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Barlow+Condensed|Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 html, body {
-  height: 100%;
+  height: 100.1%;
   min-height: 100%;
   max-width: 100% !important;
   overflow-x: hidden !important;
-  overflow-y: scroll !important; /* has to be scroll, not auto */
+  overflow-y: scroll !important; 
   -webkit-overflow-scrolling: touch !important;
 }
 
@@ -29,6 +29,7 @@ body {
   font: 1em/1.3 'Josefin Slab', serif;
   margin: 0;
   padding: 0;
+  overflow-y: scroll !important; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch !important;
 }
 
