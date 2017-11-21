@@ -333,6 +333,9 @@ footer .shadow-wrapper {
     right: 0;
     top: 0;
   }
+  #navlinks.responsive a.icon:active {
+    background: none;
+  }
   #navlinks.responsive a {
     float: none;
     display: block;
@@ -340,7 +343,6 @@ footer .shadow-wrapper {
   }
   #navlinks.responsive a:not(#order-button) {
     border: none;
-    border-bottom: 1px solid black;
   }
   #navlinks.responsive a:not(:first-child).selected {
     margin: 0;
