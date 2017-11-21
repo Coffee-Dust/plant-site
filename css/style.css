@@ -1,22 +1,11 @@
 /*/////// SETUP ////////*/
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Barlow+Condensed|Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
-html {
+html, body {
   height: 100.1%;
   min-height: 100%;
   max-width: 100% !important;
   width: 100% !important;
-  /*overflow-x: hidden !important;*/
-  /*overflow-y: scroll !important; */
-  /*-webkit-overflow-scrolling: touch !important;*/
-}
-
-body {
-height: 100.1%;
-min-height: 100%;
-/*overflow-x: hidden !important;*/
-/*overflow-y: scroll !important; */
-/*-webkit-overflow-scrolling: touch !important;*/
 }
 
 * {
@@ -37,14 +26,9 @@ body {
   font: 1em/1.3 'Josefin Slab', serif;
   margin: 0;
   padding: 0;
-  overflow-y: scroll !important; /* has to be scroll, not auto */
-  /*-webkit-overflow-scrolling: touch !important;*/
+  overflow-y: scroll !important;
 }
 
-iframe, video {
-  width: 100%;
-  min-width: 100%;
-}
 .wrapper {
   margin: 0 auto;
   width: 1050px;
