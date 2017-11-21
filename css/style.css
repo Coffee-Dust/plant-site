@@ -167,8 +167,8 @@ nav a:hover {
   color: #b5ab9e;
   border-bottom: 0px solid black;
 }
-
-nav a:active:not(#menuIcon) {
+/*nav a:active:not(#menuIcon)*/
+.bleg {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,45484d+100 */
   background: rgb(0,0,0); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(69,72,77,1) 100%); /* FF3.6-15 */
