@@ -7,11 +7,11 @@ html, body {
   max-width: 100% !important;
   width: 100% !important;
 }
-
+/*
 * {
     outline: 1px solid red;
 }
-
+*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -39,6 +39,10 @@ body {
   /*box-shadow: 0 9px 0px 0px rgba(255, 255, 255, 1), 0 -15px 0px 0px rgba(215, 217, 206, 0), 12px 0 15px -4px rgba(0, 0, 0, 0.4), -12px 0 15px -4px rgba(0, 0, 0, 0.4);*/
   padding: 35px;
   background-color: white;
+}
+
+.no-padding {
+  padding: 0px;
 }
 
 .bottom-content {
@@ -193,8 +197,9 @@ nav .shadow-wrapper .icon {
 /*/////// CONTENT ////////*/
 figure img {
   width: 100%;
-  margin: -35px;
   height: 650px;
+  z-index: 99;
+  margin-bottom: -10px;
 }
 
 /*/////// FOOTER ////////*/
