@@ -6,6 +6,8 @@ html, body {
   min-height: 100%;
   max-width: 100% !important;
   overflow-x: hidden !important;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 
 /*
