@@ -323,6 +323,9 @@ footer .shadow-wrapper {
     border-left: 1px solid black;
     margin-left: 105px;
   }
+  #navlinks a:not(#order-button) {
+    border: none;
+  }
   #navlinks.responsive {
     position: relative;
     border-bottom-left-radius: 10px;
@@ -346,5 +349,14 @@ footer .shadow-wrapper {
   }
   #navlinks.responsive a:not(:first-child).selected {
     margin: 0;
+  }
+  #menuIcon.opened {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,45484d+100 */
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(69,72,77,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 ); /* IE6-9 */
+    color: #b5ab9e;
   }
 }

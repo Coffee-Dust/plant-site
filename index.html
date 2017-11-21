@@ -20,12 +20,7 @@
       <div class="navbar">
         <nav class="wrapper">
           <div class="shadow-wrapper" id="navlinks">
-            <a href="index.html" class="selected border-left">Home</a>
-            <a href="about.html">About</a>
-            <a href="designs.html">Designs</a>
-            <a href="contact.html">Contact</a>
-            <a href="order.html" id="order-button">Place Order</a>
-            <a href="javascript:void(0);" class="border-left icon" onclick="animateMenu()">&#9776;</a>
+            <a href="index.html" class="selected border-left">Home</a><a href="about.html">About</a><a href="designs.html">Designs</a><a href="contact.html">Contact</a><a href="order.html" id="order-button">Place Order</a><a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
           </div>
         </nav>
       </div> <!-- end.wrapper -->
@@ -58,6 +53,7 @@
 
 <script type="text/javascript">
 menuIsOpen = false
+menuIsFinished = true
 
 function responsive() {
     var x = document.getElementById("navlinks");
@@ -71,24 +67,28 @@ function responsive() {
 function animateMenu() {
   var elem = document.getElementById("navlinks");
   var height;
-  //var height = elem.style.height;
-  console.log("menu status is: " + menuIsOpen);
-  if (menuIsOpen == false) {
-    height = 52;
-    var id = setInterval(frame, 5);
 
-  } else if (menuIsOpen) {
+  console.log("menu status is: " + menuIsOpen);
+
+  if (!menuIsOpen && menuIsFinished) {
+    height = 52;
+    setIconClass()
+    var id = setInterval(open, 5);
+  } else if (menuIsOpen && menuIsFinished) {
     height = 260;
     responsive();
+    setIconClass()
     var id2 = setInterval(close, 5);
   }
 
-  function frame() {
+  function open() {
     if (height == 260) {
       clearInterval(id);
-      menuIsOpen = true
       responsive()
+      menuIsOpen = true
+      menuIsFinished = true
     } else {
+      menuIsFinished = false
       height += 4;
       elem.style.height = height + 'px';
       console.log(height);
@@ -99,13 +99,24 @@ function animateMenu() {
     if (height == 52) {
       clearInterval(id2)
       menuIsOpen = false
+      menuIsFinished = true
       elem.style.height = ''
     } else {
+      menuIsFinished = false
       height = height - 4;
       elem.style.height = height + 'px';
     }
   }
-}
+
+  function setIconClass() {
+    var icon = document.getElementById("menuIcon")
+    if (icon.className === "border-left icon") {
+      icon.className += " opened"
+    } else {
+      icon.className = "border-left icon"
+    }
+  }
+}// end.animateMenu
 
 function adjustScreen() {
   var wrapper = document.querySelectorAll('.wrapper')
