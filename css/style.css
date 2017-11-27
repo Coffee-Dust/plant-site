@@ -97,16 +97,16 @@ body {
 
 .logo div .shadow-wrapper a img {
   position: relative;
-  top: -5px;
-  left: -10px;
+  top: 3px;
+  left: 0px;
   z-index: 999;
 }
 
 #title {
   position: relative;
-  top: -80px;
-  left: -18px;
-  font-size: 1.5em;
+  top: -60px;
+  left: 2px;
+  font-size: 1.8em;
   z-index: 999;
 }
 
@@ -249,7 +249,7 @@ footer .shadow-wrapper {
     height: 470px;
   }
   .logo div .shadow-wrapper a img {
-    top: -8px;
+    top: 2px;
   }
 }
 
@@ -267,7 +267,14 @@ footer .shadow-wrapper {
     line-height: 18px;
   }
   .logo div .shadow-wrapper a img {
-    top: -10px;
+    top: 1px;
+    width: 98px;
+    height: 98px;
+  }
+  #title {
+    top: -58px;
+    left: 4px;
+    font-size: 1.85em;
   }
 }
 
@@ -285,14 +292,15 @@ footer .shadow-wrapper {
     line-height: 16px;
   }
   .logo div .shadow-wrapper a img {
-    left: -8px;
-    top: -8px;
-    width: 115px;
-    height: 115px;
+    top: 2px;
+    left: 2px;
+    width: 96px;
+    height: 96px;
   }
   #title {
-    top: -75px;
-    left: -14px;
+    top: -55px;
+    left: 6px;
+    font-size: 1.9em;
   }
 }
 
