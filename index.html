@@ -5,14 +5,17 @@
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
      <meta name="apple-mobile-web-app-capable" content="yes" />
     <title></title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/scss" href="css/style.css">
+    <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    </script>
   </head>
-  <body onload="adjustScreen()">
+  <body onload="onLoad()">
     <header>
       <div class="logo">
         <div class="wrapper">
           <div class="shadow-wrapper">
-            <a href="index.html"><img src="images/logo.png" alt="Logo" width="100" height="100"></a>
+            <a href="index.html"><img src="images/logo1.png" alt="Logo"></a>
             <span id="title">ConcreteScape.net</span>
           </div>
         </div>
@@ -20,23 +23,46 @@
       <div class="navbar">
         <nav class="wrapper">
           <div class="shadow-wrapper" id="navlinks">
-            <a href="index.html" class="selected border-left">Home</a><a href="about.html">About</a><a href="designs.html">Designs</a><a href="contact.html">Contact</a><a href="order.html" id="order-button">Place Order</a><a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
+            <a href="index.html" class="selected border-left">home</a><a href="about.html">about</a><a href="designs.html">designs</a><a href="contact.html">contact</a><a href="order.html" id="order-button">Place Order</a><a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
+            <h3 id="featured-image-text">Beautiful Plant Arrangments. <br> Handmade.</h3>
           </div>
         </nav>
       </div> <!-- end.wrapper -->
     </header>
+
     <figure class="wrapper no-padding content">
-      <img src="images/featured-pot.jpg" alt="Featured plant pot arrangment">
+      <img id="featured-image" src="images/featured1.jpeg" alt="Featured plant pot arrangment">
     </figure>
-    <div class="wrapper content">
-      <article id="main-featured">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="wrapper content clearfix">
+      <article id="about-me" class="two-half">
+        <h3>About Me</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
 
-      <article id="featured" class="one-half">
+      <article id="featured-items" class="one-half">
+        <h3>Arrangments</h3>
 
+        <div class="item-box">
+          <a href="about.html/#item1">
+            <img src="images/item1.jpeg" alt="">
+            <div class="hide">
+              <h3>Item Name</h4>
+              <p>Item info.</p>
+              <h4>$0.00</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="item-box">
+          <a href="about.html/#item2">
+            <img src="images/item2.jpeg" alt="">
+            <div class="hide">
+              <h3>Item Name</h4>
+              <p>Item info.</p>
+              <h4>$0.00</h4>
+            </div>
+          </a>
+        </div>
       </article>
     </div><!-- end.wrapper -->
 
@@ -49,93 +75,3 @@
     </footer>
   </body>
 </html>
-
-<script type="text/javascript">
-menuIsOpen = false
-menuIsFinished = true
-
-function responsive() {
-    var x = document.getElementById("navlinks");
-    if (x.className === "shadow-wrapper") {
-        x.className += " responsive";
-    } else {
-        x.className = "shadow-wrapper";
-    }
-}
-
-function animateMenu() {
-  var elem = document.getElementById("navlinks");
-  var height;
-
-  console.log("menu status is: " + menuIsOpen);
-
-  if (!menuIsOpen && menuIsFinished) {
-    height = 52;
-    setIconClass()
-    var id = setInterval(open, 5);
-  } else if (menuIsOpen && menuIsFinished) {
-    height = 260;
-    responsive();
-    setIconClass()
-    var id2 = setInterval(close, 5);
-  }
-
-  function open() {
-    if (height == 260) {
-      clearInterval(id);
-      responsive()
-      menuIsOpen = true
-      menuIsFinished = true
-    } else {
-      menuIsFinished = false
-      height += 4;
-      elem.style.height = height + 'px';
-      console.log(height);
-    }
-  }
-
-  function close() {
-    if (height == 52) {
-      clearInterval(id2)
-      menuIsOpen = false
-      menuIsFinished = true
-      elem.style.height = ''
-    } else {
-      menuIsFinished = false
-      height = height - 4;
-      elem.style.height = height + 'px';
-    }
-  }
-
-  function setIconClass() {
-    var icon = document.getElementById("menuIcon")
-    if (icon.className === "border-left icon") {
-      icon.className += " opened"
-    } else {
-      icon.className = "border-left icon"
-    }
-  }
-}// end.animateMenu
-
-function adjustScreen() {
-  var wrapper = document.querySelectorAll('.wrapper')
-  if (window.innerWidth <= 860) {
-    for (var i=0; i<wrapper.length; i++) {
-      wrapper[i].style.width = window.innerWidth - 30 + "px"
-      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-    }
-  } else if (window.innerWidth <= 1200) {
-    for (var i=0; i<wrapper.length; i++) {
-      wrapper[i].style.width = window.innerWidth - 130 + "px"
-      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-    }
-  } else {
-    for (var i=0; i<wrapper.length; i++) {
-      wrapper[i].style.width = 1050 + "px"
-      console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-    }
-  }
-}
-
-window.addEventListener('resize', adjustScreen)
-</script>

@@ -1,0 +1,28 @@
+//Colors file//
+$topbar-color: #b1bc6e;
+@mixin footer-color() {
+  background: #82dbf2;
+  background: -moz-linear-gradient(top, #82dbf2 1%, #65abbe 99%);
+  background: -webkit-linear-gradient(top, #82dbf2 1%,#65abbe 99%);
+  background: linear-gradient(to bottom, #82dbf2 1%,#65abbe 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82dbf2', endColorstr='#65abbe',GradientType=0 );
+//background: #aed1dd;
+//background: #65abbe;
+}
+@mixin navbar-color() {
+  background-color: #eaddce;
+  background: #eaddce;
+  background: -moz-linear-gradient(top, #eaddce 0%, #d1c5ba 100%);
+  background: -webkit-linear-gradient(top, #eaddce 0%,#d1c5ba 100%);
+  background: linear-gradient(to bottom, #eaddce 0%,#d1c5ba 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaddce', endColorstr='#d1c5ba',GradientType=0 );
+}
+
+$footer-color: #4a6433;
+
+/* Sand Color:
+background: -moz-linear-gradient(top, #f8f5e8 0%, #f2e0c4 100%);
+background: -webkit-linear-gradient(top, #f8f5e8 0%,#f2e0c4 100%);
+background: linear-gradient(to bottom, #f8f5e8 0%,#f2e0c4 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f5e8', endColorstr='#f2e0c4',GradientType=0 );
+*/
