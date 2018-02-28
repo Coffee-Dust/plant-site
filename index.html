@@ -23,43 +23,48 @@
       <div class="navbar">
         <nav class="wrapper">
           <div class="shadow-wrapper" id="navlinks">
-            <a href="index.html" class="selected border-left">home</a><a href="about.html">about</a><a href="designs.html">designs</a><a href="contact.html">contact</a><a href="order.html" id="order-button">Place Order</a><a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
-            <h3 id="featured-image-text">Beautiful Plant Arrangments. <br> Handmade.</h3>
+            <a href="index.html" class="selected border-left">home</a>
+            <a href="about.html">about</a>
+            <a href="designs.html">designs</a>
+            <a href="contact.html">contact</a>
+            <a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
+            <h3 class="featured-image-text">Beautiful Plant Arrangments. <br> Handmade.</h3>
           </div>
         </nav>
       </div> <!-- end.wrapper -->
     </header>
 
     <figure class="wrapper no-padding content">
-      <img id="featured-image" src="images/featured1.jpeg" alt="Featured plant pot arrangment">
+      <img class="featured-image" src="images/featured1.jpeg" alt="Featured plant pot arrangment">
     </figure>
     <div class="wrapper content clearfix">
+      <!-- ___________PAGE CONTENT____________ -->
       <article id="about-me" class="two-half">
-        <h3>About Me</h3>
+        <h2 class="sea-text">About ConcreteScape</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
 
       <article id="featured-items" class="one-half">
-        <h3>Arrangments</h3>
+        <h2 class="sea-text">Latest Arrangments</h2>
 
         <div class="item-box">
-          <a href="about.html/#item1">
+          <a href="designs.html/#item1">
             <img src="images/item1.jpeg" alt="">
             <div class="hide">
               <h3>Item Name</h4>
               <p>Item info.</p>
-              <h4>$0.00</h4>
+              <h4>Click to view</h4>
             </div>
           </a>
         </div>
 
         <div class="item-box">
-          <a href="about.html/#item2">
+          <a href="designs.html/#item2">
             <img src="images/item2.jpeg" alt="">
             <div class="hide">
               <h3>Item Name</h4>
               <p>Item info.</p>
-              <h4>$0.00</h4>
+              <h4>Click to view</h4>
             </div>
           </a>
         </div>
@@ -69,7 +74,19 @@
     <footer>
       <div class="wrapper">
         <div class="shadow-wrapper">
-
+          <div class="footer-box">
+            <h3>Contact Info</h3>
+            <h4>
+              <img src="images/email-icon.png" alt="" width="32" height="28">
+              <a href="mailto:ksorrillo@hotmail.com?Subject=General%20Question" target="_top" onclick="mailAlert();" id="mailText"> ksorrillo@hotmail.com</a>
+            </h4>
+            <h4><img src="images/phone-icon.png" alt="" width="32" height="32">
+              <a href="tel:868-352-1769"> 868-352-1769</a></h4>
+            <h4>
+              <img src="images/location-icon.png" alt="" width="32" height="32">
+              <a href="javascript:void(0)" onclick="copyAddress()" id="streetAddress">#7 Sorrillo Drive, Maingot Street,<br> San Juan,<br>Trinidad and Tobago</a>
+            </h4>
+          </div>
         </div>
       </div><!-- end.wrapper -->
     </footer>

@@ -1,6 +1,14 @@
 menuIsOpen = false
 menuIsFinished = true
 
+function isMobile() {
+  return window.innerWidth <= 860;
+}
+
+function doubleTap() {
+  
+}
+
 function responsive() {
     var x = document.getElementById("navlinks");
     if (x.className === "shadow-wrapper") {
@@ -28,7 +36,7 @@ function animateMenu() {
   }
 
   function open() {
-    if (height == 260) {
+    if (height == 200) {
       clearInterval(id);
       responsive()
       menuIsOpen = true

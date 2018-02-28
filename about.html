@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title></title>
+    <link rel="stylesheet" type="text/scss" href="css/style.css">
+    <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    </script>
+  </head>
+  <body onload="onLoad()">
+    <header>
+      <div class="logo">
+        <div class="wrapper">
+          <div class="shadow-wrapper">
+            <a href="index.html"><img src="images/logo2.png" alt="Logo"></a>
+            <span id="title">ConcreteScape.net</span>
+          </div>
+        </div>
+      </div> <!-- end.logo -->
+      <div class="navbar">
+        <nav class="wrapper">
+          <div class="shadow-wrapper" id="navlinks">
+            <a href="index.html" class="border-left">home</a>
+            <a href="about.html" class="selected">about</a>
+            <a href="designs.html">designs</a>
+            <a href="contact.html">contact</a>
+            <a href="javascript:void(0);" id="menuIcon" class="border-left icon" onclick="animateMenu()">&#9776;</a>
+          </div>
+        </nav>
+      </div> <!-- end.wrapper -->
+    </header>
+
+    <figure class="wrapper no-padding content">
+      <img class="featured-image handmade" src="images/handmade.jpeg" alt="Featured plant pot arrangment">
+    </figure>
+    <div class="wrapper content clearfix">
+      <!-- ___________PAGE CONTENT____________ -->
+
+      <p>Kelsor Construction Ltd was formed from a long line of construction and carpentry professionals. Each generation passed on knowledge, expertise and a strong desire to help people realize their dreams. The company offers a full range of services from carpentry through construction. All our products are well built, pleasing to the eye, pleasing to our clients and reasonable priced.
+
+We are deeply committed to providing great value to our clients. We complete projects on and on time and always ensure our clients are 100% satisfied. Whether we are serving private individuals, corporate or government entities our products always meet our clients’ expectations.</p>
+
+    </div><!-- end.wrapper -->
+
+    <footer>
+      <div class="wrapper">
+        <div class="shadow-wrapper">
+          <div class="footer-box">
+            <h3>Contact Info</h3>
+            <h4>
+              <img src="images/email-icon.png" alt="" width="32" height="28">
+              <a href="mailto:ksorrillo@hotmail.com?Subject=General%20Question" target="_top" onclick="mailAlert();" id="mailText"> ksorrillo@hotmail.com</a>
+            </h4>
+            <h4><img src="images/phone-icon.png" alt="" width="32" height="32">
+              <a href="tel:868-352-1769"> 868-352-1769</a></h4>
+            <h4>
+              <img src="images/location-icon.png" alt="" width="32" height="32">
+              <a href="javascript:void(0)" onclick="copyAddress()" id="streetAddress">#7 Sorrillo Drive, Maingot Street,<br> San Juan,<br>Trinidad and Tobago</a>
+            </h4>
+          </div>
+        </div>
+      </div><!-- end.wrapper -->
+    </footer>
+  </body>
+</html>

@@ -24,6 +24,20 @@ function toggleItemInfoSetup() {
   }
 }
 
+function mailAlert() {
+  var mailText = document.getElementById("mailText")
+  mailText.innerHTML = "Opening in mail..."
+  setTimeout(function(){mailText.innerHTML = "ksorrillo@hotmail.com"}, 5);
+}
+
+function copyAddress() {
+  console.log("Currently disbaled");
+  /*
+  var streetAddress = document.getElementById("streetAddress")
+  streetAddress.select()
+  document.execCommand("Copy")
+  alert("Copied text. Paste in GPS app") */
+}
 
 function onLoad() {
   adjustScreen()
