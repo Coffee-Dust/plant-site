@@ -194,7 +194,7 @@ nav .shadow-wrapper .icon {
   position: relative; }
   .item-box img {
     width: 100%; }
-  .item-box a:hover {
+  .item-box a:hover, .item-box a:active {
     filter: brightness(0.5) blur(5px); }
   .item-box a div h3 {
     display: inline;
@@ -390,9 +390,33 @@ footer .shadow-wrapper {
     padding: 0px; }
 
   .item-box {
-    width: 50%;
-    float: left;
-    padding-right: 10px; }
+    width: 80%;
+    padding-right: 10px;
+    margin: auto;
+    display: block; }
+
+  .item-box.designs-page {
+    width: 100%;
+    float: none;
+    display: inline-block; }
+    .item-box.designs-page div {
+      float: right;
+      width: 40%; }
+    .item-box.designs-page img {
+      float: left;
+      margin-bottom: 40px;
+      width: 50%;
+      border-radius: 10px;
+      -moz-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.8);
+      -webkit-box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.8);
+      box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.8); }
+    .item-box.designs-page .contact-button {
+      display: inline-block;
+      text-decoration: none;
+      color: black;
+      position: relative;
+      bottom: 0px;
+      right: 0px; }
 
   .logo div .shadow-wrapper a img {
     top: 1px;
