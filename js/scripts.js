@@ -39,7 +39,29 @@ function copyAddress() {
   alert("Copied text. Paste in GPS app") */
 }
 
+function consoleLoad() {
+
+console.log(`%c
+        /~~~~~~~~~~~~~~~~~~~/|
+       /              /######/ / |
+      /              /______/ /  |
+     ========================= /||
+     |_______________________|/ ||
+      |  \\****/     \\__,,__/    ||
+      |===\\**/       __,,__     ||    CoffeeDust.io site.
+      |______________\\====/$____||    Status: brewing...
+      |   ___        /~~~~\\ $  / |
+     _|  |===|===   /      \\$_/  |
+    | |  |###|     |########| | /
+    |____\\###/______\\######/__|/
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`, "font-family:monospace")
+}
+
 function onLoad() {
+  consoleLoad()
+  responsiveImages()
   adjustScreen()
   toggleItemInfoSetup()
 }

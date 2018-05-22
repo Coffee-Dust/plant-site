@@ -6,7 +6,7 @@ function isMobile() {
 }
 
 function doubleTap() {
-  
+
 }
 
 function responsive() {
@@ -104,5 +104,42 @@ function adjustImageText() {
   }
 }
 
-window.addEventListener('resize', adjustScreen)
-window.addEventListener('resize', adjustImageText)
+function featImageQuality(res) {
+  var image = document.querySelector('.featured-image')
+  console.log(`Upping quality to @x${res}`);
+  switch (image.className) {
+    case "featured-image":
+      image.src = `images/images@x${res}/homefeat.jpg`
+      break;
+    case "featured-image handmade":
+      image.src = `images/images@x${res}/handmadefeat.jpg`
+      break;
+    case "featured-image designs":
+      image.src = `images/images@x${res}/designsfeat.jpg`
+      break;
+    case "featured-image contact":
+      image.src = `images/images@x${res}/contactfeat.jpg`
+      break;
+    default:
+      console.log("How the what did this get put on here?");
+      break;
+  }
+}
+
+function responsiveImages() {
+  var image = document.querySelector('.featured-image')
+  featImageQuality(2)
+
+  if (window.innerWidth >= 990) {
+    featImageQuality(4)
+  } else if (window.innerWidth >= 890) {
+    featImageQuality(3)
+  }
+
+  console.log(image);
+}//end func
+
+window.addEventListener('resize', function () {
+  adjustScreen()
+  // adjustImageText()
+})
