@@ -15,7 +15,7 @@
       <div class="logo">
         <div class="wrapper">
           <div class="shadow-wrapper">
-            <a href="index.html"><img src="images/logo1.png" alt="Logo"></a>
+            <a href="index.html"><img src="images/logo4.png" alt="Logo"></a>
             <span id="title">ConcreteScape.net</span>
           </div>
         </div>
@@ -45,29 +45,46 @@
       </article>
 
       <article id="featured-items" class="one-half">
-        <h2 class="sea-text">Latest Arrangments</h2>
+        <h2 class="sea-text">Featured Arrangments</h2>
 
         <div class="item-box">
-          <a href="designs.html#item1">
-            <img src="images/item1.jpeg" alt="">
-            <div class="hide">
-              <h3>Item Name</h4>
-              <p>Item info.</p>
-              <h4>Click to view</h4>
-            </div>
+          <a onclick="displayFullscreen(this.parentElement)">
+            <img src="images/items/leafwaterfall.jpg" alt="">
           </a>
-        </div>
+          <div class="hide" id="item-info">
+            <h3>Waterfall of Leaves</h4>
+            <p>To good to leaf alone.</p>
+            <h4>Click to view</h4>
+            <div class="dropdown">
+              <button onclick="showOrderOptionsMenu()" class="dropbtn">Order</button>
+              <div id="orderDropdown" class="dropdown-content">
+                <a onclick="">ask about this</a>
+                <a onclick="">custom order like this</a>
+              </div>
+            </div>
+          </div>
+          <div class="info-bg"></div>
+        </div><!-- end item-box -->
 
         <div class="item-box">
-          <a href="designs.html#item2">
-            <img src="images/item2.jpeg" alt="">
-            <div class="hide">
-              <h3>Item Name</h4>
-              <p>Item info.</p>
-              <h4>Click to view</h4>
-            </div>
+          <a onclick="displayFullscreen(this.parentElement)">
+            <img src="images/items/item1.jpg" alt="">
           </a>
-        </div>
+          <div class="hide" id="item-info">
+            <h3>Plant Holder</h4>
+            <p>To good to leaf alone.</p>
+            <h4>Click to view</h4>
+            <div class="dropdown">
+              <button onclick="showOrderOptionsMenu()" class="dropbtn">Order</button>
+              <div id="orderDropdown" class="dropdown-content">
+                <a onclick="">ask about this</a>
+                <a onclick="">custom order like this</a>
+              </div>
+            </div>
+          </div>
+          <div class="info-bg"></div>
+        </div><!-- end item-box -->
+
       </article>
     </div><!-- end.wrapper -->
 
