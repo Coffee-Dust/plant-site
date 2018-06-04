@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Barlow+Condensed|Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
 @import 'colors';
+@import 'item-boxes';
 html, body {
   height: 100.1%;
   min-height: 100%;
@@ -36,8 +37,8 @@ body {
 }
 
 .content {
-  box-shadow: 0 0 30px rgba(0,0,0,0.7);
-  /*box-shadow: 0 9px 0px 0px rgba(255, 255, 255, 1), 0 -15px 0px 0px rgba(215, 217, 206, 0), 12px 0 15px -4px rgba(0, 0, 0, 0.4), -12px 0 15px -4px rgba(0, 0, 0, 0.4);*/
+  box-shadow: 0px 40px 0px 0px white, 0 0 30px rgba(0, 0, 0, 0.7);
+  // box-shadow: 0 9px 0px 0px rgba(255, 255, 255, 1), 0 -15px 0px 0px rgba(215, 217, 206, 0), 12px 0 15px -4px rgba(0, 0, 0, 0.4), -12px 0 15px -4px rgba(0, 0, 0, 0.4);
   padding: 35px;
   background-color: white;
 }
@@ -97,7 +98,7 @@ body {
 
 .logo div .shadow-wrapper {
   display: block;
-  z-index: 99;
+  z-index: 9;
   width: 100%;
   padding-right: 5px;
   padding-left: 5px;
@@ -111,7 +112,7 @@ body {
   position: relative;
   top: 1px;
   left: 0px;
-  z-index: 999;
+  z-index: 10;
   width: 98px;
   height: 98px;
 }
@@ -122,7 +123,7 @@ body {
   top: -60px;
   left: 2px;
   font-size: 1.8em;
-  z-index: 999;
+  z-index: 11;
 }
 
 /*/////// NAV ////////*/
@@ -205,113 +206,6 @@ nav .shadow-wrapper .icon {
 .featured-image-text#contact {
   color: white;
 }
-
-
-.item-box {
-  display: inline-block;
-  margin-bottom: 5px;
-  position: relative;
-
-  img {
-    width: 100%;
-  }
-
-  a:hover, a:active {
-    filter: brightness(0.50) blur(5px);
-  }
-
-  a div {
-    h3 {
-      display: inline;
-      color: white;
-      position: absolute;
-      top: 0px;
-      left: 15px;
-    }
-
-    p {
-      display: inline;
-      color: white;
-      position: absolute;
-      top: 40px;
-      left: 15px;
-      font-size: 1em;
-    }
-
-    h4 {
-      display: inline;
-      color: white;
-      position: absolute;
-      bottom: 0px;
-      right: 20px;
-    }
-  }
-}
-
-.item-box a div.hide {
-  h3 {
-    display: none;
-    color: white;
-    position: absolute;
-    top: 0px;
-    left: 15px;
-  }
-
-  p {
-    display: none;
-    color: white;
-    position: absolute;
-    top: 40px;
-    left: 15px;
-    font-size: 1em;
-  }
-
-  h4 {
-    display: none;
-    color: white;
-    position: absolute;
-    bottom: 0px;
-    right: 20px;
-  }
-}
-
-.item-box.designs-page {
-
-  div {
-    float: right;
-    width: 40%;
-    h3 {
-
-    }
-
-    p {
-
-    }
-
-    h4 {
-
-    }
-  }
-
-  img {
-    float: left;
-    margin-bottom: 40px;
-    width: 50%;
-    border-radius: 10px;
-    -moz-box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
-    -webkit-box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
-    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
-  }
-  .contact-button {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    bottom: 0px;
-    right: 0px;
-  }
-}
-
 
 .featured-image {
   width: 100%;
