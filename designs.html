@@ -96,10 +96,10 @@
         <div class="dropdown">
           <button onclick="showCatMenu()" class="dropbtn">Categories</button>
           <div id="catDropdown" class="dropdown-content">
-            <a onclick="displayItemsWithCat('all')" class="selected">all</a>
+            <a onclick="displayItemsWithCat('all')">all</a>
             <a onclick="displayItemsWithCat('nature')">nature</a>
-            <a href="displayItemsWithCat('vases')">flower pots/vases</a>
-            <a href="displayItemsWithCat('vases')">decoration</a>
+            <a onclick="displayItemsWithCat('vases')">flower pots/vases</a>
+            <a onclick="displayItemsWithCat('deco')">decoration</a>
           </div>
         </div>
 
@@ -107,36 +107,85 @@
       <div class="wrapper content clearfix">
         <!-- ___________PAGE CONTENT____________ -->
         <br>
+        <article class="grid big">
 
-        <div class="item-box">
-          <a onclick="toggleFullscreen(this.parentElement)">
-            <img src="images/items/largeflowerpot.jpg" alt="">
-            <div class="hide" id="item-info">
-              <h3>Large Folded Flower Pot</h3>
-              <p>Yellow red color with tortilla like folds. White color inside.</p>
-              <h4>Click to view fullscreen</h4>
-            </div>
-          </a>
-        </div><!-- end item-box -->
+          <div class="item-box grid-box" id="cat-vases">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/largeflowerpot.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Large Folded Flower Pot</h3>
+                <p>Yellow red color with tortilla like folds. White color inside.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
 
-        <!-- <div class="dropdown hidden">
-          <button onclick="showOrderOptionsMenu()" class="dropbtn">Order</button>
-          <div id="orderDropdown" class="dropdown-content">
-            <a onclick="" class="selected">ask about this</a>
-            <a onclick="">custom order like this</a>
-            <a href=""></a>
-          </div>
-        </div> -->
+          <div class="item-box grid-box" id="cat-nature">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/patternleaf.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Leaf with Swirl Pattern</h3>
+                <p>Large leaf with brown/gold unique swirl pattern.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
 
-        <!-- <div class="item-box designs-page" id="item1">
-            <img src="images/item1.jpeg" alt="">
-            <div class="">
-              <h3>Item Name</h4>
-              <p>Item info.</p>
-              <button type="button"><a href="mailto:ksorrillo@hotmail.com?Subject=General%20Question" target="_top" class="contact-button">Contact about availability.</a></button>
-            </div>
-        </div> -->
+          <div class="item-box grid-box" id="cat-vases">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/maroonflowerpot.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Folded Flower Pot</h3>
+                <p>Small flower pot. Maroon red/gray color with tortilla like folds.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
 
+          <div class="item-box grid-box" id="cat-vases">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/largeflowerpotblue.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Large Folded Flower Pot</h3>
+                <p>Blue/green color with tortilla like folds. White inside.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
+
+          <div class="item-box grid-box" id="cat-decoration">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/red-whitecandle.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Folded Candle Holder</h3>
+                <p>Red and White set. Can be used for candles or plants.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
+
+          <div class="item-box grid-box" id="cat-vases">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/greenflowerpot.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Handled Flower Pot</h3>
+                <p>Unique folded style. Green/white color.</p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
+
+          <div class="item-box grid-box" id="cat-vases">
+            <a onclick="toggleFullscreen(this.parentElement)">
+              <img src="images/items/rockyflowerpot.jpg" alt="">
+              <div class="hide" id="item-info">
+                <h3>Rocky Flower Pot</h3>
+                <p>Rocky outside. Dirt layer covered with seashells and pebbles </p>
+                <h4>Click to view fullscreen</h4>
+              </div>
+            </a>
+          </div><!-- end item-box -->
+        </article>
 
       </div><!-- end.wrapper -->
 

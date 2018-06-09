@@ -8,6 +8,10 @@
 }
 
 /* ----------- Featured Items --------------- */
+// * {
+//   outline: solid 1px red;
+// }
+
 figure {
   position: relative;
 }
@@ -54,36 +58,40 @@ figure {
 /* ----------- Item Boxes --------------- */
 
 .item-box:hover, .item-box:active {
-  a {
+  img {
     filter: brightness(0.50) blur(5px);
   }
 }
 
 .item-box {
   display: inline-block;
-  margin-bottom: 5px;
   position: relative;
+  margin: 0px;
+  padding: 0px;
 
   img {
+    display: block;
     width: 100%;
   }
 
   div#item-info {
+    line-height: normal;
     h3 {
       display: inline;
       color: white;
       position: absolute;
       top: 0px;
-      left: 15px;
+      left: 5%;
     }
 
     p {
       display: inline;
       color: white;
       position: absolute;
-      top: 40px;
-      left: 15px;
-      font-size: 1em;
+      top: 50px;
+      left: 5%;
+      right: 8px;
+      font-size: 0.9em;
     }
 
     h4 {
@@ -92,9 +100,6 @@ figure {
       position: absolute;
       bottom: 0px;
       right: 20px;
-    }
-    div.dropdown {
-      display: none;
     }
   }
 }
@@ -129,8 +134,17 @@ figure {
   }
 }
 
-
 /* ----------- Item Boxes Grid --------------- */
+.grid {
+  column-count: 4;
+  column-gap: 0;
+}
+
+div .item-box.grid-box {
+  margin: 2px;
+  margin-bottom: -4px;
+  // outline: solid 1px green;
+}
 
 /* ----------- Item Box Full Screen --------------- */
 
@@ -138,6 +152,9 @@ figure {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
 .frost {
   filter: blur(10px);
 }
@@ -173,7 +190,7 @@ figure {
   p {
     display: block;
     color: black;
-    width: 40%;
+    width: 45%;
     float: left;
   }
 
@@ -186,13 +203,15 @@ figure {
     position: relative;
     z-index: 99;
     float: left;
+    width: 40%;
+    max-width: 50%;
     height: auto;
-    width: 50%;
     max-height: 95%;
     -moz-box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
     -webkit-box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
     box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.8);
     margin: 15px;
+    margin-right: 5%;
   }
 
   .close {
@@ -231,6 +250,17 @@ figure {
   left: auto;
 }
 
+/* ----------- Item-box Media Queries --------------- */
+
+@media only screen and (max-width: 860px) {
+  
+}
+
+/* ----------- Item-box Fullscreen Media Queries --------------- */
+
+@media only screen and (max-width: 860px) {
+
+}
 
 /* ----------- Category Dropdown --------------- */
 
