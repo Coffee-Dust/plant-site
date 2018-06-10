@@ -1,6 +1,12 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 /*/////// SETUP ////////*/
 @import url('https://fonts.googleapis.com/css?family=Bad+Script|Barlow+Condensed|Dancing+Script');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 @import 'colors';
 @import 'item-boxes';
 html, body {
@@ -13,12 +19,6 @@ html, body {
 // * {
   // outline: 1px solid red;
 // }
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
 body {
   /*
@@ -87,6 +87,8 @@ body {
   box-shadow: inset 0 -3px .5em .5em white;
   height: 2em;
   text-align: center;
+  font-family: 'Amatic SC';
+  font-size: 1.7em;
 }
 
 /*/////// LOGO ////////*/
@@ -110,7 +112,7 @@ body {
 
 .logo div .shadow-wrapper a img {
   position: relative;
-  top: 1px;
+  top: 2px;
   left: 0px;
   z-index: 10;
   width: 98px;
@@ -118,7 +120,7 @@ body {
 }
 
 #title {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Amatic SC', serif;
   position: relative;
   top: -60px;
   left: 2px;
@@ -148,7 +150,7 @@ nav .shadow-wrapper {
 
 nav a {
   text-decoration: none;
-  font: 1.5em 'Josefin Slab', serif;
+  font: 1.5em 'Amatic SC', serif;
   color: black;
   padding: 19px 20px 5px 20px;
   display: inline-block;
@@ -195,17 +197,21 @@ nav .shadow-wrapper .icon {
 
 .featured-image-text {
   position: absolute;
-  top: 100px;
-  left: 100px;
-  font: 1.5em 'Josefin Slab', serif;
-  line-height: 1.3em;
   display: inline-block;
-  display: none;
+  top: 10px;
+  left: 20px;
+  padding: 0;
+  margin: 0;
+  font: 3.5em 'Amatic SC', cursive;
+  font-weight: lighter;
+  line-height: 1.4em;
 }
 
-.featured-image-text#contact {
-  color: white;
+.featured-image-text.bottom {
+  top: auto;
+  bottom: 10px;
 }
+
 
 .featured-image {
   width: 100%;
@@ -339,6 +345,10 @@ footer .shadow-wrapper {
     left: 6px;
     font-size: 1.9em;
   }
+
+  .featured-image-text {
+    font-size: 3em;
+  }
 }
 
 @media only screen and (max-width: 860px) {
@@ -429,6 +439,10 @@ footer .shadow-wrapper {
     right: 10px;
     width: 16px;
     height: 45px;
+  }
+
+  .featured-image-text {
+    font-size: 2.7em;
   }
 
 }

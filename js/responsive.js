@@ -36,7 +36,7 @@ function animateMenu() {
   }
 
   function open() {
-    if (height == 200) {
+    if (height == 220) {
       clearInterval(id);
       responsive()
       menuIsOpen = true

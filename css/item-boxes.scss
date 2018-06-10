@@ -8,13 +8,11 @@
 }
 
 /* ----------- Featured Items --------------- */
-// * {
-//   outline: solid 1px red;
-// }
 
 figure {
   position: relative;
 }
+
 .item-box.featured {
   display: inline-block;
   vertical-align: middle;
@@ -48,6 +46,16 @@ figure {
   top: 0px;
   left: 0px;
   height: 100%;
+}
+
+.featured-item-container.home-page .item-box.featured {
+  margin-right: 5%;
+  margin-top: 30%;
+}
+
+.featured-item-container.home-page .item-box.first {
+  margin-left: 10%;
+  width: 24%;
 }
 
 .hidden {
@@ -143,7 +151,6 @@ figure {
 div .item-box.grid-box {
   margin: 2px;
   margin-bottom: -4px;
-  // outline: solid 1px green;
 }
 
 /* ----------- Item Box Full Screen --------------- */
@@ -184,7 +191,7 @@ div .item-box.grid-box {
     text-align: center;
     float: left;
     border-radius: 5px;
-    font-size: 1.4em;
+    font: 1.8em 'Amatic SC', serif;
   }
 
   p {
@@ -246,20 +253,98 @@ div .item-box.grid-box {
 }
 
 #orderDropdown {
-  right: 2px;
-  left: auto;
+  top: 0;
+  left: -80px;
+}
+
+/* ----------- Item-box Grid Media Queries --------------- */
+
+@media only screen and (max-width: 860px) {
+  .grid {
+    column-count: 2;
+    column-gap: 0;
+  }
 }
 
 /* ----------- Item-box Media Queries --------------- */
 
 @media only screen and (max-width: 860px) {
-  
+
+  .item-box a div#item-info {
+    h3 {
+      display: none;
+    }
+
+    p {
+      display: none;
+    }
+
+    h4 {
+      display: inline;
+      color: white;
+      position: absolute;
+      top: 2%;
+      left: 5px;
+      right: 5px;
+      text-align: center;
+    }
+  }
+
+  button.dropbtn {
+      padding: 10px;
+  }
 }
 
 /* ----------- Item-box Fullscreen Media Queries --------------- */
 
 @media only screen and (max-width: 860px) {
+  .fullscreen-item-box {
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
 
+    h3 {
+      float: none;
+      width: 80%;
+      margin: 5px auto;
+      font-size: 1.7em;
+    }
+
+    p {
+      float: none;
+      width: 80%;
+      margin: 20px auto;
+      font-size: 1.2em;
+    }
+
+    img {
+      z-index: 99;
+      float: none;
+      width: 90%;
+      max-width: 90%;
+      margin-left: 5%;
+    }
+
+    .close {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+  }
+
+  .fullscreen-item-box .dropdown {
+    float: none;
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+  }
+
+  #orderDropdown {
+    top: 37px;
+    right: 0px;
+    left: auto;
+  }
 }
 
 /* ----------- Category Dropdown --------------- */
@@ -273,6 +358,9 @@ div .item-box.grid-box {
     font: 1.3em 'Josefin Slab', serif;
     border: none;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 102;
 }
 
 /* Dropdown button on hover & focus */
@@ -286,7 +374,7 @@ div .item-box.grid-box {
     position: absolute;
     display: inline-block;
     bottom: -33px;
-    left: -2px;
+    left: 0px;
 }
 
 /* Dropdown Content (Hidden by Default) */
