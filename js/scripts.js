@@ -68,4 +68,5 @@ function onLoad() {
   responsiveImages()
   adjustScreen()
   toggleItemInfoSetup()
+  alert(window.innerWidth)
 }
