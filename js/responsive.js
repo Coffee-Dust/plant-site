@@ -79,19 +79,19 @@ function adjustScreen() {
     for (var i=0; i<wrapper.length; i++) {
       wrapper[i].style.width = window.innerWidth - 30 + "px"
       //console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-      alert("Adjusted the wrapper size because its <=860")
+      // alert("Adjusted the wrapper size because its <=860")
     }
   } else if (window.innerWidth <= 1200) {
     for (var i=0; i<wrapper.length; i++) {
       wrapper[i].style.width = window.innerWidth - 130 + "px"
       //console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-      alert("Adjusted the wrapper size because its <=1200")
+      // alert("Adjusted the wrapper size because its <=1200")
     }
   } else {
     for (var i=0; i<wrapper.length; i++) {
       wrapper[i].style.width = 1050 + "px"
       //console.log(wrapper[i] + "width is now: " + wrapper[i].style.width);
-      alert("Adjusted the wrapper size because its else")
+      // alert("Adjusted the wrapper size because its else")
     }
   }
 }
