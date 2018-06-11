@@ -50,8 +50,10 @@ figure {
   margin-top: 30%; }
 
 .featured-item-container.home-page .item-box.first {
-  margin-left: 10%;
-  width: 24%; }
+  margin-left: 10%; }
+
+.featured-item-container.home-page .item-box:nth-child(2) {
+  width: 22%; }
 
 .hidden {
   display: none; }
@@ -301,8 +303,8 @@ div .item-box.grid-box {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 55px;
-  left: 2px;
+  top: 38px;
+  left: 0px;
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -410,7 +412,7 @@ body {
 
 .logo div .shadow-wrapper a img {
   position: relative;
-  top: 2px;
+  top: 4px;
   left: 0px;
   z-index: 10;
   width: 98px;
@@ -578,7 +580,7 @@ footer .shadow-wrapper {
     font-size: 95%; }
 
   .logo div .shadow-wrapper a img {
-    top: 1px;
+    top: 3px;
     width: 97px;
     height: 97px; } }
 @media only screen and (max-width: 990px) {
@@ -589,7 +591,7 @@ footer .shadow-wrapper {
     font-size: 88%; }
 
   .logo div .shadow-wrapper a img {
-    top: 1px;
+    top: 3px;
     width: 95px;
     height: 95px; }
 
@@ -605,7 +607,7 @@ footer .shadow-wrapper {
     font-size: 86%; }
 
   .logo div .shadow-wrapper a img {
-    top: 2px;
+    top: 4px;
     left: 2px;
     width: 95px;
     height: 95px; }
@@ -641,7 +643,7 @@ footer .shadow-wrapper {
     padding: 0px; }
 
   .logo div .shadow-wrapper a img {
-    top: 1px;
+    top: 4px;
     left: 2px;
     width: 93px;
     height: 93px; }
@@ -696,6 +698,6 @@ footer .shadow-wrapper {
     height: 45px; }
 
   .featured-image-text {
-    font-size: 2.7em; } }
+    font-size: 2.3em; } }
 
 /*# sourceMappingURL=style.css.map */

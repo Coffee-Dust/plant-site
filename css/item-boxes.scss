@@ -55,7 +55,11 @@ figure {
 
 .featured-item-container.home-page .item-box.first {
   margin-left: 10%;
-  width: 24%;
+  // width: 24%;
+}
+
+.featured-item-container.home-page .item-box:nth-child(2) {
+  width: 22%;
 }
 
 .hidden {
@@ -381,8 +385,8 @@ div .item-box.grid-box {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 55px;
-    left: 2px;
+    top: 38px;
+    left: 0px;
     background-color: #f1f1f1;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
