@@ -110,7 +110,7 @@ function adjustImageText() {
 
 function featImageQuality(res) {
   var image = document.querySelector('.featured-image')
-  console.log(`Upping quality to @x${res}`);
+  // console.log(`Upping quality to @x${res}`);
   switch (image.className) {
     case "featured-image":
       image.src = `images/images@x${res}/homefeat.jpg`
@@ -145,5 +145,4 @@ function responsiveImages() {
 
 window.addEventListener('resize', function () {
   adjustScreen()
-  // adjustImageText()
 })
