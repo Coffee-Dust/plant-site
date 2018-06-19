@@ -68,5 +68,4 @@ function onLoad() {
   adjustScreen()
   responsiveImages()
   toggleItemInfoSetup()
-  // alert(`The viewport is not active. ${window.innerWidth}`)
 }
