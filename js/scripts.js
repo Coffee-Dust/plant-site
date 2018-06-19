@@ -65,8 +65,8 @@ console.log(`%c
 
 function onLoad() {
   consoleLoad()
-  responsiveImages()
   adjustScreen()
+  responsiveImages()
   toggleItemInfoSetup()
   // alert(`The viewport is not active. ${window.innerWidth}`)
 }
