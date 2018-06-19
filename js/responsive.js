@@ -110,7 +110,7 @@ function adjustImageText() {
 
 function featImageQuality(res) {
   var image = document.querySelector('.featured-image')
-  // console.log(`Upping quality to @x${res}`);
+  // console.log(`Upping quality to @x${res}`);=-
   switch (image.className) {
     case "featured-image":
       image.src = `images/images@x${res}/homefeat.jpg`
@@ -141,6 +141,15 @@ function responsiveImages() {
   }
 
   console.log(image);
+}//end func
+
+function responsiveViewport() {
+  var vp = document.querySelector("#vp")
+  if (window.innerWidth >= 640) {
+    vp.attr('content', 'maximum-scale=1, initial-scale=1, width=' + screen.width)
+  } else {
+    vp.attr('content', 'maximum-scale=1, initial-scale=1, width=640')
+  }
 }//end func
 
 window.addEventListener('resize', function () {
