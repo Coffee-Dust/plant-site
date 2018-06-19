@@ -150,6 +150,7 @@ function responsiveViewport() {
   } else {
     vp.attr('content', 'maximum-scale=1, initial-scale=1, width=640')
   }
+  console.log("responsiveViewport did stuff!");
 }//end func
 
 window.addEventListener('resize', function () {

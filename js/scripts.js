@@ -64,6 +64,7 @@ console.log(`%c
 }
 
 function onLoad() {
+  responsiveViewport()
   consoleLoad()
   responsiveImages()
   adjustScreen()
