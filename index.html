@@ -7,9 +7,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
-      alert(`Viewport set to width 640px. Screen with = ${window.innerWidth} \nBuild:16`)
+      var vpWidth = window.innerWidth;
+      alert(`vpWidth = ${vpWidth}. Screen width = ${window.innerWidth} \nBuild:17`)
       window.addEventListener('resize', function () {
         alert(`${window.innerWidth}`);
+        if (window.innerWidth !== vpWidth) {
+          window.innerWidth == vpWidth
+        }
       })
 
       var cachedWidth = $(window).width();
