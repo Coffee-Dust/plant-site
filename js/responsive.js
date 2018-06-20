@@ -145,12 +145,13 @@ var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android
 function orientationReload() {
   if (window.innerWidth < window.innerHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
+    alert("RELOADING PAGE!")
     location.reload()
   }
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 25`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 26`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
@@ -161,16 +162,17 @@ function setupMobileSize() {
     }
 
     //resize gets called when scrolling with inertia on mobile.
-    window.addEventListener('resize', function () {
-      if (window.innerWidth !== vpWidth) {
-        window.innerWidth = vpWidth;
-      }
-    })
+    // window.addEventListener('resize', function () {
+    //   if (window.innerWidth !== vpWidth) {
+    //     window.innerWidth = vpWidth;
+    //   }
+    // })
   }
 }// end func
 
 window.addEventListener('resize', function () {
   if (isMobileBrowser) {
+    alert("RESIZED OR CHANGED ORIENTATION!")
     orientationReload()
   }
   adjustScreen()
