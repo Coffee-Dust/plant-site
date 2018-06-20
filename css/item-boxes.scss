@@ -191,6 +191,7 @@ div .item-box.grid-box {
     color: white;
     font-weight: normal;
     @include sea-color;
+    width: 40%;
     padding: 5px 15px;
     text-align: center;
     float: left;
@@ -235,7 +236,8 @@ div .item-box.grid-box {
     font: 1em 'Josefin Slab', serif;
     border: none;
     cursor: pointer;
-    float: left;
+    top: 3px;
+    left: 3px;
     border-radius: 10px;
   }
 

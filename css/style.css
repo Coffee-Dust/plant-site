@@ -157,6 +157,7 @@ div .item-box.grid-box {
     background: -webkit-linear-gradient(top, #b1bc6e 0%, #3794aa 100%);
     background: linear-gradient(to bottom, #b1bc6e 0%, #3794aa 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1bc6e', endColorstr='#3794aa',GradientType=0 );
+    width: 40%;
     padding: 5px 15px;
     text-align: center;
     float: left;
@@ -193,7 +194,8 @@ div .item-box.grid-box {
     font: 1em 'Josefin Slab', serif;
     border: none;
     cursor: pointer;
-    float: left;
+    top: 3px;
+    left: 3px;
     border-radius: 10px; }
   .fullscreen-item-box button:hover, .fullscreen-item-box button:focus {
     background-color: #8fdae5;
