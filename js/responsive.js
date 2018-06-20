@@ -141,10 +141,12 @@ function responsiveImages() {
 //SO it must be called FIRST.
 var loadedInLandscape = false
 var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+var vpWidth;
+var vpHeight;
 
 function orientationReload() {
-  alert(`Calling orientation reload before lagic. Loaded in Landscape?: ${loadedInLandscape}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
-  if (window.innerWidth < window.innerHeight && loadedInLandscape) {
+  alert(`Calling orientation reload before lagic. Loaded in Landscape?: vp are: ${vpWidth}, ${vpHeight}\n${loadedInLandscape}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
+  if (window.innerWidth < vpHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
     alert("RELOADING PAGE!")
     location.reload()
@@ -152,7 +154,7 @@ function orientationReload() {
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 29`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 30`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
