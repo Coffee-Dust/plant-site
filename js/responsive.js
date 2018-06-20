@@ -151,14 +151,17 @@ function orientationReload() {
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 26`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 27`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
     window.innerWidth = vpWidth;
 
     if (vpWidth > vpHeight) {
+      alert(`It loaded in landscape because: vp are: ${vpWidth}, ${vpHeight}\n innerSize is: ${vpWidth}, ${vpHeight}`)
       loadedInLandscape = true
+    } else {
+      alert(`It did not load in landscape because: vp are: ${vpWidth}, ${vpHeight}\n innerSize is: ${vpWidth}, ${vpHeight}`)
     }
 
     //resize gets called when scrolling with inertia on mobile.
