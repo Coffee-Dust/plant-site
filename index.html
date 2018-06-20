@@ -9,15 +9,19 @@
       //---- This is very important because androids are stuupid! ----//
       //But for real. This initially sets the window width to the viewport width because android doesn't do that.
       //SO it must be called FIRST.
-      var vpWidth = window.innerWidth;
-      window.innerWidth = vpWidth;
-      //resize gets called when scrolling with inertia on mobile.
-      window.addEventListener('resize', function () {
-        console.log(`It got resized! \nBuild: 19`);
-        // if (window.innerWidth !== vpWidth) {
-        //   window.innerWidth == vpWidth
-        // }
-      })
+      var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+
+      alert(`Its a mobile browers? ${isMobileBrowser} \nBuild: 20`);
+      if (isMobileBrowser) {
+        var vpWidth = window.innerWidth;
+        window.innerWidth = vpWidth;
+        //resize gets called when scrolling with inertia on mobile.
+        window.addEventListener('resize', function () {
+          if (window.innerWidth !== vpWidth) {
+            window.innerWidth == vpWidth
+          }
+        })
+      }
     </script>
     <script type="text/javascript" src="js/responsive.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
