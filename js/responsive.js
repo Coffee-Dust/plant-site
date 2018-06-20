@@ -139,20 +139,29 @@ function responsiveImages() {
 //---- This is very important because androids are stuupid! ----//
 //But for real. This initially sets the window width to the viewport width because android doesn't do that.
 //SO it must be called FIRST.
+var loadedInLandscape = false
+var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+
+function orientationReload() {
+  if (window.innerWidth < window.innerHeight && loadedInLandscape) {
+    // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
+    location.reload()
+  }
+}
 
 function setupMobileSize() {
-  var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.outerHeight} width is: ${window.outerWidth} \nBuild: 24`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 25`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
     window.innerWidth = vpWidth;
 
+    if (vpWidth > vpHeight) {
+      loadedInLandscape = true
+    }
+
     //resize gets called when scrolling with inertia on mobile.
     window.addEventListener('resize', function () {
-      if (window.innerWidth > window.innerHeight) {
-
-      }
       if (window.innerWidth !== vpWidth) {
         window.innerWidth = vpWidth;
       }
@@ -161,5 +170,8 @@ function setupMobileSize() {
 }// end func
 
 window.addEventListener('resize', function () {
+  if (isMobileBrowser) {
+    orientationReload()
+  }
   adjustScreen()
 })
