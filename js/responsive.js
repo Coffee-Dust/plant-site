@@ -145,7 +145,7 @@ var vpWidth;
 var vpHeight;
 
 function orientationReload() {
-  alert(`Calling orientation reload before lagic. Loaded in Landscape?: vp are: ${vpWidth}, ${vpHeight}\n${loadedInLandscape}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
+  alert(`Calling orientation reload before lagic. Loaded in Landscape?: ${loadedInLandscape}\nvp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
   if (window.innerWidth < vpHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
     alert("RELOADING PAGE!")
@@ -154,10 +154,10 @@ function orientationReload() {
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 30`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 31`);
   if (isMobileBrowser) {
-    var vpWidth = window.innerWidth;
-    var vpHeight = window.innerHeight;
+    vpWidth = window.innerWidth;
+    vpHeight = window.innerHeight;
     window.innerWidth = vpWidth;
 
     if (vpWidth > vpHeight) {
