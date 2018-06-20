@@ -143,6 +143,7 @@ var loadedInLandscape = false
 var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
 
 function orientationReload() {
+  alert(`calling orientation reload before lagic. Loaded in Landscape?(${loadedInLandscape}) vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
   if (window.innerWidth < window.innerHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
     alert("RELOADING PAGE!")
@@ -151,17 +152,17 @@ function orientationReload() {
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 27`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 28`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
     window.innerWidth = vpWidth;
 
     if (vpWidth > vpHeight) {
-      alert(`It loaded in landscape because: vp are: ${vpWidth}, ${vpHeight}\n innerSize is: ${vpWidth}, ${vpHeight}`)
+      alert(`It loaded in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
       loadedInLandscape = true
     } else {
-      alert(`It did not load in landscape because: vp are: ${vpWidth}, ${vpHeight}\n innerSize is: ${vpWidth}, ${vpHeight}`)
+      alert(`It did not load in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
     }
 
     //resize gets called when scrolling with inertia on mobile.
