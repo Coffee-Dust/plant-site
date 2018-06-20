@@ -143,7 +143,7 @@ var loadedInLandscape = false
 var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
 
 function orientationReload() {
-  alert(`calling orientation reload before lagic. Loaded in Landscape?(${loadedInLandscape}) vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
+  alert(`Calling orientation reload before lagic. Loaded in Landscape?: ${loadedInLandscape}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
   if (window.innerWidth < window.innerHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
     alert("RELOADING PAGE!")
@@ -152,7 +152,7 @@ function orientationReload() {
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 28`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 29`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
