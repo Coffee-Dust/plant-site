@@ -136,6 +136,27 @@ function responsiveImages() {
   console.log(image);
 }//end func
 
+//---- This is very important because androids are stuupid! ----//
+//But for real. This initially sets the window width to the viewport width because android doesn't do that.
+//SO it must be called FIRST.
+function setupMobileSize() {
+  var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+  alert(`Its a mobile browers? ${isMobileBrowser} \nBuild: 22`);
+  if (isMobileBrowser) {
+    var vpWidth = window.innerWidth;
+    window.innerWidth = vpWidth;
+    //resize gets called when scrolling with inertia on mobile.
+    window.addEventListener('resize', function () {
+      if (window.innerWidth !== vpWidth) {
+        window.innerWidth == vpWidth
+      }
+    })
+    window.addEventListener("orientationchange", function() {
+      alert("the orientation of the device is now " + screen.orientation.angle);
+    });
+  }
+}// end func
+
 window.addEventListener('resize', function () {
   adjustScreen()
 })

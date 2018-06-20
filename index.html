@@ -2,28 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta id="vp" name="viewport" content="width=device-width; initial-scale=1; minimum-scale=1; maximum-scale=1">
+    <meta id="vp" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>DenCrafts - Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript">
-      //---- This is very important because androids are stuupid! ----//
-      //But for real. This initially sets the window width to the viewport width because android doesn't do that.
-      //SO it must be called FIRST.
-      var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
-
-      alert(`Its a mobile browers? ${isMobileBrowser} \nBuild: 20`);
-      if (isMobileBrowser) {
-        var vpWidth = window.innerWidth;
-        window.innerWidth = vpWidth;
-        //resize gets called when scrolling with inertia on mobile.
-        window.addEventListener('resize', function () {
-          if (window.innerWidth !== vpWidth) {
-            window.innerWidth == vpWidth
-          }
-        })
-      }
-    </script>
     <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript">
+      setupMobileSize()
+    </script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body onload="onLoad()">
