@@ -142,7 +142,7 @@ function responsiveImages() {
 
 function setupMobileSize() {
   var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 23`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.outerHeight} width is: ${window.outerWidth} \nBuild: 24`);
   if (isMobileBrowser) {
     var vpWidth = window.innerWidth;
     var vpHeight = window.innerHeight;
@@ -150,6 +150,9 @@ function setupMobileSize() {
 
     //resize gets called when scrolling with inertia on mobile.
     window.addEventListener('resize', function () {
+      if (window.innerWidth > window.innerHeight) {
+
+      }
       if (window.innerWidth !== vpWidth) {
         window.innerWidth = vpWidth;
       }
