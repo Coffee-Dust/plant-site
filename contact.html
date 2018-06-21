@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>DenCrafts - Contact</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript">
-      //---- This is very important because androids are stuupid! ----//
-      //But for real. This initially sets the window width to the viewport width because android doesn't do that.
-      //SO it must be called FIRST.
-      var vpWidth = window.innerWidth;
-      window.innerWidth = vpWidth;
-      //resize gets called when scrolling with inertia on mobile.
-      window.addEventListener('resize', function () {
-        if (window.innerWidth !== vpWidth) {
-          window.innerWidth == vpWidth
-        }
-      })
-    </script>
     <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript">
+      setupMobileSize()
+    </script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body onload="onLoad()">
@@ -51,7 +41,32 @@
     <div class="wrapper content clearfix">
       <!-- ___________PAGE CONTENT____________ -->
 
+      <article class="big">
+        <h4 class="sea-text" id="contact-page-sea-text">Chose from pre-made <a href="designs.html">designs</a> and customize them.<br>Or Describe below what you want and i'll get back to you as soon as possible.</h4>
 
+        <br>
+        <div class="contact-field-container">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="lname">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email..">
+
+            <label for="subject">Description</label>
+            <textarea id="subject" name="subject" placeholder="Describe order.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit" class="dropbtn">
+          </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+      </article>
 
     </div><!-- end.wrapper -->
 
@@ -65,7 +80,7 @@
               <a href="mailto:dennisethonpson1961@gmail.com?Subject=General%20Question" target="_top" onclick="mailAlert();" id="mailText"> dennisethonpson1961@gmail.com</a>
             </h4>
             <h4><img src="images/phone-icon.png" alt="" width="32" height="32">
-              <a href="tel:868-352-1769"> 868-352-1769</a></h4>
+              <a href="tel:"> </a></h4>
             <h4>
               <img src="images/location-icon.png" alt="" width="32" height="32">
               <a href="javascript:void(0)" onclick="copyAddress()" id="streetAddress">105 A, Rancho Quemado,<br> San Juan,<br>Trinidad and Tobago</a>

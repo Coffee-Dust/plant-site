@@ -512,6 +512,9 @@ nav .shadow-wrapper .icon {
   top: auto;
   bottom: 10px; }
 
+#about-featured-text {
+  color: white; }
+
 .featured-image {
   width: 100%;
   height: auto;
@@ -529,6 +532,40 @@ nav .shadow-wrapper .icon {
   padding: 15px;
   padding-top: 5px;
   border-left: 1px dashed black; }
+
+#contact-page-sea-text {
+  height: 3em; }
+
+@media only screen and (max-width: 587px) {
+  #contact-page-sea-text {
+    height: 4.1em; } }
+label {
+  font-family: 'Amatic SC';
+  font-size: 1.5em; }
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; }
+
+input[type=submit] {
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.contact-field-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 75%;
+  margin: 0 auto; }
 
 /*/////// FOOTER ////////*/
 footer {
@@ -625,7 +662,10 @@ footer .shadow-wrapper {
     font-size: 1.9em; }
 
   .featured-image-text {
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  .contact-field-container {
+    width: 100%; } }
 @media only screen and (max-width: 860px) {
   .wrapper {
     width: 730px; }

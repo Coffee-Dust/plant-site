@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>DenCrafts - About</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript">
-      //---- This is very important because androids are stuupid! ----//
-      //But for real. This initially sets the window width to the viewport width because android doesn't do that.
-      //SO it must be called FIRST.
-      var vpWidth = window.innerWidth;
-      window.innerWidth = vpWidth;
-      //resize gets called when scrolling with inertia on mobile.
-      window.addEventListener('resize', function () {
-        if (window.innerWidth !== vpWidth) {
-          window.innerWidth == vpWidth
-        }
-      })
-    </script>
     <script type="text/javascript" src="js/responsive.js"></script>
+    <script type="text/javascript">
+      setupMobileSize()
+    </script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body onload="onLoad()">
@@ -46,7 +36,7 @@
 
     <figure class="wrapper no-padding content">
       <img class="featured-image handmade" src="images/images@x1/handmadefeat.jpg" alt="Featured plant pot arrangment">
-      <h3 class="featured-image-text" id="contact">Handmade. <br> With Love.</h3>
+      <h3 class="featured-image-text" id="about-featured-text">Handmade. <br> With Love.</h3>
     </figure>
     <div class="wrapper content clearfix">
       <!-- ___________PAGE CONTENT____________ -->
@@ -67,7 +57,7 @@ We are deeply committed to providing great value to our clients. We complete pro
               <a href="mailto:dennisethonpson1961@gmail.com?Subject=General%20Question" target="_top" onclick="mailAlert();" id="mailText"> dennisethonpson1961@gmail.com</a>
             </h4>
             <h4><img src="images/phone-icon.png" alt="" width="32" height="32">
-              <a href="tel:868-352-1769"> 868-352-1769</a></h4>
+              <a href="tel:"> </a></h4>
             <h4>
               <img src="images/location-icon.png" alt="" width="32" height="32">
               <a href="javascript:void(0)" onclick="copyAddress()" id="streetAddress">105 A, Rancho Quemado,<br> San Juan,<br>Trinidad and Tobago</a>

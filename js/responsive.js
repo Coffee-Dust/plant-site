@@ -136,7 +136,7 @@ function responsiveImages() {
   console.log(image);
 }//end func
 
-//---- This is very important because androids are stuupid! ----//
+//---- This is very important because androids are stupid! ----//
 //But for real. This initially sets the window width to the viewport width because android doesn't do that.
 //SO it must be called FIRST.
 var loadedInLandscape = false

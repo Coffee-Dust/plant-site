@@ -68,11 +68,11 @@ function openEmail(custom) {
   if (custom == false) {
     sub = `Is "${fullscreenElement.querySelector("h3").innerHTML}" available?`
     bod = `Please provide name and contact info below:\nName: \nYour Email: \n Phone#(Optional): \n\nWe will get back to you as soon as possible with an answer!\n\n\n\nItem Description: \n${fullscreenElement.querySelector("p").innerHTML}`
-    window.location.assign("mailto:d24dust@hotmail.com?Subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(bod));
+    window.location.assign("mailto:dennisethonpson1961@gmail.com?Subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(bod));
   } else {
     sub = `Custom Order Like "${fullscreenElement.querySelector("h3").innerHTML}"`
     bod = `Item Description: \n${fullscreenElement.querySelector("p").innerHTML}\n\n\nPlease provide name and contact info below:\nName: \nYour Email: \n Phone#(Optional): \n\nPlease describe below, what you want to be customized:\n`
-    window.location.assign("mailto:d24dust@hotmail.com?Subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(bod));
+    window.location.assign("mailto:dennisethonpson1961@gmail.com?Subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(bod));
   }
 }
 
