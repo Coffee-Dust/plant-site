@@ -150,7 +150,7 @@ function orientationReload() {
   if (window.innerHeight > vpHeight && loadedInLandscape) {
     // Landscape to Portrait will reload to prevent UI sizing bugs
     location.reload()
-  } else if (window.innerHeight < vpHeight && loadedInPortrait) {
+  } else if (window.innerWidth > vpWidth && loadedInPortrait) {
     // Portrait to Landscape will reload to prevent UI sizing bugs
     location.reload()
   }
