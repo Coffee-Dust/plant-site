@@ -146,7 +146,7 @@ var vpWidth;
 var vpHeight;
 
 function orientationReload() {
-
+  alert("Build 38")
   if (window.innerHeight > vpHeight && loadedInLandscape) {
     // Landscape to Portrait will reload to prevent UI sizing bugs
     location.reload()
