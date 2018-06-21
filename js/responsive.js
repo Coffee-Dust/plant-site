@@ -145,17 +145,18 @@ var vpWidth;
 var vpHeight;
 
 function orientationReload() {
-  alert(`Calling orientation reload before lagic. Loaded in Landscape?: ${loadedInLandscape}\nvp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
-  alert(`Just to reiterate. window.innerHeight > vpHeight => ${window.innerHeight > vpHeight}\nBecause inner: ${window.innerHeight} & vpH: ${vpHeight}`)
+  // alert(`Calling orientation reload before lagic. Loaded in Landscape?: ${loadedInLandscape}\nvp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`);
+
   if (window.innerHeight > vpHeight && loadedInLandscape) {
     // Portrait and loadedInLandscape will reload to prevent UI sizing bugs
-    alert("RELOADING PAGE!")
+    location.reload()
+  } else if (window.innerHeight < vpHeight && !loadedInLandscape) {
     location.reload()
   }
 }
 
 function setupMobileSize() {
-  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 35`);
+  alert(`Its a mobile browers? ${isMobileBrowser}\nThe height is:${window.innerHeight} width is: ${window.innerWidth} \nBuild: 36`);
   if (isMobileBrowser) {
     vpWidth = window.innerWidth;
     vpHeight = window.innerHeight;
@@ -163,10 +164,10 @@ function setupMobileSize() {
     window.innerWidth = vpWidth;
 
     if (vpWidth > vpHeight) {
-      alert(`It loaded in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
+      // alert(`It loaded in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
       loadedInLandscape = true
     } else {
-      alert(`It did not load in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
+      // alert(`It did not load in landscape because: vp are: ${vpWidth}, ${vpHeight}\ninnerSize is: ${window.innerWidth}, ${window.innerHeight}`)
     }
 
     //resize gets called when scrolling with inertia on mobile.
@@ -180,7 +181,7 @@ function setupMobileSize() {
 
 window.addEventListener('resize', function () {
   if (isMobileBrowser) {
-    alert("RESIZED OR CHANGED ORIENTATION!")
+    // alert("RESIZED OR CHANGED ORIENTATION!")
     orientationReload()
   }
   adjustScreen()
