@@ -140,6 +140,7 @@ function responsiveImages() {
 //But for real. This initially sets the window width to the viewport width because android doesn't do that.
 //SO it must be called FIRST.
 var loadedInLandscape = false
+var loadedInPortrait;
 var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
 var vpWidth;
 var vpHeight;
@@ -149,7 +150,7 @@ function orientationReload() {
   if (window.innerHeight > vpHeight && loadedInLandscape) {
     // Landscape to Portrait will reload to prevent UI sizing bugs
     location.reload()
-  } else if (window.innerHeight < vpHeight && !loadedInLandscape) {
+  } else if (window.innerHeight < vpHeight && loadedInPortrait) {
     // Portrait to Landscape will reload to prevent UI sizing bugs
     location.reload()
   }
@@ -163,7 +164,11 @@ function setupMobileSize() {
     window.innerWidth = vpWidth;
 
     if (vpWidth > vpHeight) {
+      loadedInPortrait = false
       loadedInLandscape = true
+    } else if (vpWidth < vpHeight) {
+      loadedInLandscape = false
+      loadedInPortrait = true
     }
   }
 }// end func

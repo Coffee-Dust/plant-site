@@ -533,12 +533,18 @@ nav .shadow-wrapper .icon {
   padding-top: 5px;
   border-left: 1px dashed black; }
 
-#contact-page-sea-text {
-  height: 3em; }
+.contact-page-sea-text {
+  height: 2.1em; }
 
-@media only screen and (max-width: 587px) {
-  #contact-page-sea-text {
-    height: 4.1em; } }
+#first-header {
+  height: 2.1em; }
+
+@media only screen and (max-width: 604px) {
+  .contact-page-sea-text {
+    height: 3.1em; } }
+@media only screen and (max-width: 439px) {
+  .contact-page-sea-text#first-header {
+    height: 3.1em; } }
 label {
   font-family: 'Amatic SC';
   font-size: 1.5em; }
