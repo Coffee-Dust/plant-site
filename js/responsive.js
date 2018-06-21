@@ -146,13 +146,13 @@ var vpWidth;
 var vpHeight;
 
 function orientationReload() {
-  alert("Build 38")
+  // alert("Build 39")
   if (window.innerHeight > vpHeight && loadedInLandscape) {
     // Landscape to Portrait will reload to prevent UI sizing bugs
     location.reload()
   } else if (window.innerWidth > vpWidth && loadedInPortrait) {
     // Portrait to Landscape will reload to prevent UI sizing bugs
-    location.reload()
+    // location.reload()
   }
 }
 
