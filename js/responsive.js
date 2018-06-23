@@ -177,10 +177,10 @@ function setupMobileSize() {
 mql.addListener(function(m) {
 	if(m.matches) {
 		// Changed to portrait
-    orientationReload()
+    location.reload()
 	}	else {
 		// Changed to landscape
-    orientationReload()
+    location.reload()
 	}
 });
 
