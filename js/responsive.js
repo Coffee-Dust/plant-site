@@ -144,6 +144,7 @@ var loadedInPortrait;
 var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
 var vpWidth;
 var vpHeight;
+var mql = window.matchMedia("(orientation: portrait)");
 
 function orientationReload() {
   // alert("Build 39")
@@ -152,7 +153,7 @@ function orientationReload() {
     location.reload()
   } else if (window.innerWidth > vpWidth && loadedInPortrait) {
     // Portrait to Landscape will reload to prevent UI sizing bugs
-    // location.reload()
+    location.reload()
   }
 }
 
@@ -173,9 +174,16 @@ function setupMobileSize() {
   }
 }// end func
 
-window.addEventListener('resize', function () {
-  if (isMobileBrowser) {
+mql.addListener(function(m) {
+	if(m.matches) {
+		// Changed to portrait
     orientationReload()
-  }
+	}	else {
+		// Changed to landscape
+    orientationReload()
+	}
+});
+
+window.addEventListener('resize', function () {
   adjustScreen()
 })
