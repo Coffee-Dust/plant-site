@@ -149,6 +149,7 @@ var vpHeight;
 
 
 function updateOrientation() {
+  alert("update orientation called")
   if (isLandscape.matches) {
     currentOrien = "landscape"
   } else {
@@ -174,7 +175,7 @@ function setupMobileSize() {
 
 window.addEventListener('resize', function () {
   if (currentOrien !== cachedOrien) {
-    alert(`I guess the orientation changed! the current is: ${currentOrien}, the cache is: ${cachedOrien}`)
+    alert(`Build 56\nI guess the orientation changed! the current is: ${currentOrien}, the cache is: ${cachedOrien}`)
     location.reload();
   }
   adjustScreen()
