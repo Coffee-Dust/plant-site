@@ -149,7 +149,7 @@ var vpHeight;
 
 
 function updateOrientation() {
-  if (isLandscape.matched) {
+  if (isLandscape.matches) {
     currentOrien = "landscape"
   } else {
     currentOrien = "portrait"
