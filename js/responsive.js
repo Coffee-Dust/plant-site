@@ -140,9 +140,9 @@ function responsiveImages() {
 //---- This is very important because androids are stupid! ----//
 //But for real. This initially sets the window width to the viewport width because android doesn't do that.
 //SO it must be called FIRST.
+var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
 var isLandscape = window.matchMedia("(orientation: portrait)");
 var currentOrien;
-var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
 var cachedOrien;
 var vpWidth;
 var vpHeight;
@@ -178,7 +178,7 @@ window.addEventListener('resize', function () {
   }
   adjustScreen()
   updateOrientation()
-}
+})
 
 
 // window.addEventListener('resize', function () {
