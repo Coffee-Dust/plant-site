@@ -136,24 +136,23 @@ function responsiveImages() {
   console.log(image);
 }//end func
 
+
 //---- This is very important because androids are stupid! ----//
 //But for real. This initially sets the window width to the viewport width because android doesn't do that.
 //SO it must be called FIRST.
-var loadedInLandscape = false
-var loadedInPortrait;
-var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+var isLandscape = window.matchMedia("(orientation: portrait)");
+var currentOrien;
+var isMobileBrowser = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i);
+var cachedOrien;
 var vpWidth;
 var vpHeight;
-var mql = window.matchMedia("(orientation: portrait)");
 
-function orientationReload() {
-  // alert("Build 39")
-  if (window.innerHeight > vpHeight && loadedInLandscape) {
-    // Landscape to Portrait will reload to prevent UI sizing bugs
-    location.reload()
-  } else if (window.innerWidth > vpWidth && loadedInPortrait) {
-    // Portrait to Landscape will reload to prevent UI sizing bugs
-    location.reload()
+
+function updateOrientation() {
+  if (isLandscape.matched) {
+    currentOrien = "landscape"
+  } else {
+    currentOrien = "portrait"
   }
 }
 
@@ -164,26 +163,33 @@ function setupMobileSize() {
 
     window.innerWidth = vpWidth;
 
-    if (vpWidth > vpHeight) {
-      loadedInPortrait = false
-      loadedInLandscape = true
-    } else if (vpWidth < vpHeight) {
-      loadedInLandscape = false
-      loadedInPortrait = true
+    if (isLandscape.matches) {
+      cachedOrien = "landscape"
+    } else {
+      cachedOrien = "portrait"
     }
+
   }
 }// end func
 
-mql.addListener(function(m) {
-	if(m.matches) {
-		// Changed to portrait
-    location.reload()
-	}	else {
-		// Changed to landscape
-    location.reload()
-	}
-});
-
 window.addEventListener('resize', function () {
+  if (currentOrien !== cachedOrien) {
+    location.reload();
+  }
   adjustScreen()
-})
+  updateOrientation()
+}
+
+
+// window.addEventListener('resize', function () {
+//   if (!isLandscape.matches && didReloadTo === "landscape") {
+// 		// Changed to portrait
+//     didReloadTo = "portrait"
+//     location.reload()
+// 	}	else if (isLandscape.matches && didReloadTo === "portrait"){
+// 		// Changed to landscape
+//     didReloadTo = "landscape"
+//     location.reload()
+// 	}
+//   adjustScreen()
+// })
