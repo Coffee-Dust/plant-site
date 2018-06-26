@@ -222,6 +222,11 @@ div .item-box.grid-box {
     column-gap: 0; } }
 /* ----------- Item-box Media Queries --------------- */
 @media only screen and (max-width: 860px) {
+  article#featured-items .item-box {
+    width: 48%;
+    float: left;
+    margin: 1%; }
+
   .item-box a div#item-info h3 {
     display: none; }
   .item-box a div#item-info p {
@@ -242,6 +247,10 @@ div .item-box.grid-box {
     width: 48%;
     float: left;
     margin: 1%; } }
+@media only screen and (max-width: 460px) {
+  article#featured-items .item-box {
+    width: 100%;
+    float: none; } }
 /* ----------- Item-box Fullscreen Media Queries --------------- */
 @media only screen and (max-width: 860px) and (orientation: portrait) {
   .fullscreen-item-box {
@@ -495,6 +504,54 @@ nav a.selected {
 
 nav .shadow-wrapper .icon {
   display: none; }
+
+#instruction-box {
+  position: absolute;
+  display: none;
+  top: 30px;
+  left: 0px;
+  z-index: 100;
+  font: 1.5em 'Amatic SC', serif;
+  width: 300px; }
+  #instruction-box .arrow_box {
+    position: relative;
+    background: #9ab479;
+    border: 3px solid #dcd0c3;
+    padding-right: 5px;
+    padding-left: 5px; }
+  #instruction-box .arrow_box:after, #instruction-box .arrow_box:before {
+    bottom: 100%;
+    left: 17.5%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  #instruction-box .arrow_box:after {
+    border-color: rgba(154, 180, 121, 0);
+    border-bottom-color: #9ab479;
+    border-width: 30px;
+    margin-left: -30px; }
+  #instruction-box .arrow_box:before {
+    border-color: rgba(220, 208, 195, 0);
+    border-bottom-color: #dcd0c3;
+    border-width: 34px;
+    margin-left: -34px; }
+  #instruction-box .close-box {
+    position: absolute;
+    z-index: 101;
+    background-color: #1da4c2;
+    color: white;
+    padding: 5px;
+    font: 0.8em 'Josefin Slab', serif;
+    border: none;
+    cursor: pointer;
+    top: 0px;
+    right: 0;
+    border-radius: 10px; }
+  #instruction-box .close-box:hover, #instruction-box .close-box:active {
+    background-color: #8fdae5; }
 
 /*/////// CONTENT ////////*/
 .featured-image-text {

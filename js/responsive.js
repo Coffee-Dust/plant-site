@@ -175,7 +175,6 @@ function setupMobileSize() {
 window.addEventListener('resize', function () {
   updateOrientation()
   if (currentOrien !== cachedOrien) {
-    // alert(`Build 58\nI guess the orientation changed! the current is: ${currentOrien}, the cache is: ${cachedOrien}`)
     location.reload();
   }
   adjustScreen()
