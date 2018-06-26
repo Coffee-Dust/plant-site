@@ -97,4 +97,4 @@ window.onclick = function(event) {
       }
     }
   }
-}
+}//endof event :(

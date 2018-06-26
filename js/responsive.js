@@ -173,9 +173,12 @@ function setupMobileSize() {
 }// end func
 
 window.addEventListener('resize', function () {
-  updateOrientation()
-  if (currentOrien !== cachedOrien) {
-    location.reload();
+  if (isMobileBrowser) {
+    updateOrientation()
+    if (currentOrien !== cachedOrien) {
+      console.log(`reloading because currentOrien is: ${currentOrien} and cachedOrien is ${cachedOrien}`);
+      location.reload();
+    }
   }
   adjustScreen()
 })
