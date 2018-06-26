@@ -389,6 +389,12 @@ footer .shadow-wrapper {
   }
 }
 
+@media only screen and (max-width: 380px) {
+  #copyright-text {
+    height: 80px;
+  }
+}
+
 /* ----------- MEDIA QUEIRYS --------------- */
 
 @media only screen and (max-width: 1200px) {
