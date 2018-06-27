@@ -193,6 +193,7 @@ nav .shadow-wrapper .icon {
   top: 30px;
   left: 0px;
   z-index: 100;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
   font: 1.5em 'Amatic SC', serif;
   width: 300px;
   .arrow_box {
@@ -389,7 +390,7 @@ footer .shadow-wrapper {
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 430px) {
   #copyright-text {
     height: 80px;
   }
